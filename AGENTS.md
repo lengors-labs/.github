@@ -77,6 +77,6 @@ When creating any pull request:
 ## Git & GitHub safety
 
 - Never force-push.
-- Never delete branches, worktrees, or tags without explicit user confirmation.
+- Never delete branches, worktrees, or tags without explicit user confirmation. A worktree and the local branch checked out in it are one unit: when the user confirms deleting a worktree, that confirmation also covers its associated branch — remove the worktree first (`git worktree remove <path>`), then delete the branch (`git branch -d <branch>`). Use plain `-d`, never `-D`: if the branch has unmerged commits and deletion is refused, report it instead of force-deleting. Deleting a standalone branch (no worktree involved) still requires explicit confirmation naming that branch.
 - If a GitHub API/tool call fails, stop and report the error — do not retry destructively.
 - Ask before acting whenever identification is ambiguous (which issue, which project, which account).
