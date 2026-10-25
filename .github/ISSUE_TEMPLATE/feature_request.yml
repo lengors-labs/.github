@@ -1,6 +1,7 @@
 ---
 name: Feature request
 description: Request a new feature
+type: Feature
 labels:
   - enhancement
 body:
