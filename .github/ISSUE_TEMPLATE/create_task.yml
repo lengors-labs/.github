@@ -1,6 +1,7 @@
 ---
 name: Create task
 description: Create a task
+type: Task
 body:
   - type: markdown
     attributes:
